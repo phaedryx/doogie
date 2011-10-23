@@ -1,25 +1,7 @@
-<h1>Listing entries</h1>
+<div id="app"></div>
 
-<table>
-  <tr>
-    <th>Written on</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @entries.each do |entry| %>
-  <tr>
-    <td><%= entry.written_on %></td>
-    <td><%= entry.content %></td>
-    <td><%= link_to 'Show', entry %></td>
-    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-    <td><%= link_to 'Destroy', entry, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Entry', new_entry_path %>
+<script type="text/javascript" charset="utf-8">
+  jQuery(function() {
+    new App({el: $("#app")});
+  });
+</script>
