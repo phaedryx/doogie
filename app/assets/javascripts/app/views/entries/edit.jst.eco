@@ -1,0 +1,23 @@
+<h1>Edit Entry</h1>
+
+<form>
+  
+  <label>
+    <span>Written On</span>
+    <input 
+      type="text" name="written_on" 
+      value="<%= @written_on %>" required
+ autofocus>
+  </label>
+  
+  <label>
+    <span>Content</span>
+    <input 
+      type="text" name="content" 
+      value="<%= @content %>" required
+>
+  </label>
+  
+  <button>Edit</button>
+
+</form>
