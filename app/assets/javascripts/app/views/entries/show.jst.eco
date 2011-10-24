@@ -1,6 +1,6 @@
 <h1>Show Entry</h1>
 
-<a data-type="back">Back</a>
+<a data-type="edit">Edit</a> <a data-type="back">Back</a>
 
 <p>Written On: <%= @written_on %></p>
 <p>Content: <%= @content %></p>

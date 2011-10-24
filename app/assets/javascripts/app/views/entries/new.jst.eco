@@ -3,16 +3,12 @@
 <a data-type="back">Back</a>
 
 <form> 
-  <label>
-    <span>Written On</span>
-    <input type="text" name="written_on" value="<%= @written_on %>" required autofocus>
-  </label>
-  
-  <label>
-    <span>Content</span>
-    <input type="text" name="content" value="<%= @content %>" required>
-  </label>
-  
+  <label>Written On</label>
+  <input name="written_on" type="text" value="<%= @written_on %>" required autofocus>
+  <br>
+  <label>Content</label>
+  <input type="text" name="content" value="<%= @content %>" required>
+  <br>
   <button>Create</button>
 
 </form>

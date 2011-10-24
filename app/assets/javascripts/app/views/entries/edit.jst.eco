@@ -3,15 +3,11 @@
 <a data-type="back">Back</a>
 
 <form>  
-  <label>
-    <span>Written On</span>
-    <input type="text" name="written_on" value="<%= @written_on %>" required autofocus>
-  </label>
-  
-  <label>
-    <span>Content</span>
-    <input type="text" name="content" value="<%= @content %>" required>
-  </label>
+  <label for="written_on">Written On</label>
+  <input id="written_on" type="text" name="written_on" value="<%= @written_on %>" required autofocus>
+  <br>
+  <textarea name="content"required><%= @content %></textarea>
+  <br>
   
   <button>Edit</button>
 
