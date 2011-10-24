@@ -1,14 +1,12 @@
-<h1>Edit Entry</h1>
-
 <a data-type="back">Back</a>
 
 <form>  
   <label for="written_on">Written On</label>
   <input id="written_on" type="text" name="written_on" value="<%= @written_on %>" required autofocus>
   <br>
-  <textarea name="content"required><%= @content %></textarea>
+  <textarea rows="40" cols="80" name="content"required><%= @content %></textarea>
   <br>
   
-  <button>Edit</button>
+  <button>Save</button>
 
 </form>
