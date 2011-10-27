@@ -1,7 +1,7 @@
-<% current = new Date() %>
-<% currentYear = current.getFullYear()  %>
+<% current = new Date()                   %>
+<% currentYear = current.getFullYear()    %>
 <% currentMonth = current.getMonth() + 1  %>
-<% currentDay = current.getDate() %>
+<% currentDay = current.getDate()         %>
 
 <h1>New Entry</h1>
 
