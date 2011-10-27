@@ -1,4 +1,4 @@
 class App.Entry extends Spine.Model
-  @configure 'Entry', 'written_on', 'content'
+  @configure 'Entry', 'year', 'month', 'day', 'content'
   @extend Spine.Model.Ajax
   @url: '/entries'

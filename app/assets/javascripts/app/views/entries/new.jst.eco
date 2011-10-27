@@ -1,14 +1,32 @@
+<% current = new Date() %>
+<% currentYear = current.getFullYear()  %>
+<% currentMonth = current.getMonth() + 1  %>
+<% currentDay = current.getDate() %>
+
 <h1>New Entry</h1>
 
 <a data-type="back">Back</a>
 
 <form> 
-  <label>Written On</label>
-  <input name="written_on" type="text" value="<%= @written_on %>" required autofocus>
+  <select name="year">  
+  <% for year in [2011..2015]: %>
+    <option <%= "selected='selected'" if year is currentYear %> value="<%= year %>"><%= year %></option>
+  <% end %>
+  </select>
+  <select name="month">
+  <% for month in [1..12]: %>
+    <option <%= "selected='selected'" if month is currentMonth %> value="<%= month %>"><%= month %></option>
+  <% end %>
+  </select>
+  <select name="day">
+  <% for day in [1..31]: %>
+    <option <%= "selected='selected'" if day is currentDay %> value="<%= day %>"><%= day %></option>
+  <% end %>
+  </select>
   <br>
-  <label>Content</label>
-  <input type="text" name="content" value="<%= @content %>" required>
+  
+  <textarea rows="40" cols="80" name="content" required autofocus><%= @content %></textarea>
   <br>
+  
   <button>Create</button>
-
 </form>

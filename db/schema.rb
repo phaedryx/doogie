@@ -11,13 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111023183701) do
+ActiveRecord::Schema.define(:version => 20111027015849) do
 
   create_table "entries", :force => true do |t|
-    t.datetime "written_on"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "year",       :limit => 4
+    t.integer  "month",      :limit => 2
+    t.integer  "day",        :limit => 2
   end
 
 end

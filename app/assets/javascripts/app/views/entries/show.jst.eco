@@ -2,5 +2,5 @@
 
 <a data-type="edit">Edit</a> <a data-type="back">Back</a>
 
-<p>Written On: <%= @written_on %></p>
+<p><%= "#{@year}-#{@month}-#{@day}" %></p>
 <p>Content: <%= @content %></p>

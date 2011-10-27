@@ -1,12 +1,25 @@
 <a data-type="back">Back</a>
 
-<form>  
-  <label for="written_on">Written On</label>
-  <input id="written_on" type="text" name="written_on" value="<%= @written_on %>" required autofocus>
+<form>
+  <select name="year">  
+  <% for year in [2011..2015]: %>
+    <option <%= "selected='selected'" if parseInt(@year) is year %> value="<%= year %>"><%= year %></option>
+  <% end %>
+  </select>
+  <select name="month">
+  <% for month in [1..12]: %>
+    <option <%= "selected='selected'" if parseInt(@month) is month %> value="<%= month %>"><%= month %></option>
+  <% end %>
+  </select>
+  <select name="day">
+  <% for day in [1..31]: %>
+    <option <%= "selected='selected'" if parseInt(@day) is day %> value="<%= day %>"><%= day %></option>
+  <% end %>
+  </select>
   <br>
-  <textarea rows="40" cols="80" name="content"required><%= @content %></textarea>
+  
+  <textarea rows="40" cols="80" name="content" required autofocus><%= @content %></textarea>
   <br>
   
   <button>Save</button>
-
 </form>
